@@ -3,11 +3,11 @@ import tw from "tailwind-styled-components/dist/tailwind";
 import "./SideBarIcon.styles.css";
 
 const SideBarIcon = ({ icon, text = "toolip 💡" }) => (
-  <SideBarIconStyle className="sidebar__icon">
+  <SideBarIconStyle>
     {/* Icon */}
     {icon}
     {/* Icon */}
-    <Tooltip>{text}</Tooltip>
+    <Tooltip className="">{text}</Tooltip>
   </SideBarIconStyle>
 );
 
@@ -32,6 +32,8 @@ shadow-lg
 text-green-500
 transition-all
 w-12
+group // Verry important notion in Tailwind
+
 `;
 
 const Tooltip = tw.div`
@@ -52,6 +54,8 @@ duration-100
 origin-left;
 transform
 scale-0
+group-hover:scale-100 // Verry important notion in Tailwind
+
 `;
 
 export default SideBarIcon;
