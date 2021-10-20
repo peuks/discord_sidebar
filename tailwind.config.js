@@ -1,32 +1,29 @@
+const colors = require("tailwindcss/colors");
+
 module.exports = {
+  enabled: true,
+  mode: "jit",
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
-  mod: "jit",
-  darkMode: false, // or 'media' or 'class'
+  darkMode: "class", // class, 'media' or boolean
   theme: {
     extend: {
       colors: {
-        "bookmark-purple": "#5267DF",
-        "bookmark-red": "#FA5959",
-        "bookmark-blue": "#242A45",
-        "bookmark-grey": "#9194A2",
-        "bookmark-white": "#f7f7f7",
+        gray: {
+          900: "#202225",
+          800: "#2f3136",
+          700: "#36393f",
+          600: "#4f545c",
+          400: "#d4d7dc",
+          300: "#e3e5e8",
+          200: "#ebedef",
+          100: "#f2f3f5",
+        },
       },
-    },
-    fontFamily: {
-      Poppins: ["Poppins, sans-serif"],
-    },
-    container: {
-      center: true,
-      padding: "1rem",
-      screens: {
-        lg: "1124px",
-        xl: "1124px",
-        "2xl": "1124px",
+      spacing: {
+        88: "22rem",
       },
     },
   },
-  variants: {
-    extend: {},
-  },
+  variants: {},
   plugins: [],
 };
